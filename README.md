@@ -1,29 +1,30 @@
-# eyes-cli
+# yves-cli
 
-[![NPM version](https://badge.fury.io/js/eyes-cli.png)](http://badge.fury.io/js/eyes-cli)
-[![NPM dependencies](https://david-dm.org/adjohnson916/eyes-cli.png)](https://david-dm.org/adjohnson916/eyes-cli)
-
-> CLI JSON inspector with [eyes.js][eyes] from [cloudhead][cloudhead]. Pretty colors!
+> CLI JSON inspector with [yves][yves] from [Joris Röling][jorisroling]. Pretty colors!
 
 ## Install
 
 ```shell
-$ npm install -g eyes-cli
+$ npm install -g yves-cli
 ```
 
 ## Usage
 
 ```shell
-$ eyes --help
-Usage: eyes [options] <file ...>
+$ yves --help
+Usage: yves [options] <file ...>
 
   Options:
 
-    -h, --help            output usage information
-    -V, --version         output the version number
-    --no-pretty           no pretty formatting
-    --no-color            no color
-    -m, --max-length <n>  max length
+    -h, --help             output usage information
+    -V, --version          output the version number
+    --no-pretty            no pretty formatting
+    --no-color             no color
+    -m, --max-length <n>   max length
+    -r, --root <path>      set dot notated root field
+    -f, --fields <fields>  comma separated fields
+    -q, --query <expr>     query data with expr (ala mongo)
+    -h, --help             output usage information    
 ```
 
 ## Examples
@@ -35,7 +36,7 @@ Usage: eyes [options] <file ...>
 $ ls
 package.json component.json
 
-$ eyes package.json
+$ yves package.json
 ```
 
 #### Or many files:
@@ -43,20 +44,20 @@ $ eyes package.json
 $ ls
 package.json component.json
 
-$ eyes package.json component.json
+$ yves package.json component.json
 ```
 
 #### Pipe from any source:
 ```shell
-$ curl -s "https://api.github.com/users/adjohnson916" | eyes
+$ curl -s "https://api.github.com/users/adjohnson916" | yves
 ```
 
 ```shell
-$ echo '{"foo": {"bar": 0}}' | eyes 
+$ echo '{"foo": {"bar": 0}}' | yves 
 {
     foo: { bar: 0 }
 }
 ```
 
-[eyes]: https://github.com/cloudhead/eyes.js
-[cloudhead]: https://github.com/cloudhead/
+[yves]: https://github.com/jorisroling/yves
+[jorisroling]: https://github.com/jorisroling/
