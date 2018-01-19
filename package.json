@@ -1,0 +1,57 @@
+{
+  "name": "yves-cli",
+  "version": "0.0.1",
+  "description": "CLI JSON inspector with jorisroling/yves.js",
+  "url": "https://github.com/jorisroling/yves-cli",
+  "homepage": "https://github.com/jorisroling/yves-cli",
+  "author": {
+    "name": "Joris Röling",
+    "url": "https://github.com/jorisroling"
+  },
+  "keywords": [
+    "yves",
+    "cli",
+    "json",
+    "inspector",
+    "debug",
+    "inspect",
+    "print"
+  ],
+  "bugs": "https://github.com/jorisroling/yves-cli/issues",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jorisroling/yves-cli.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/jorisroling/yves-cli/master/LICENSE"
+    }
+  ],
+  "preferGlobal": "true",
+  "main": "./lib/Main.js",
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "bin": {
+    "yves": "./cli.js"
+  },
+  "scripts": {
+    "test": "bash ./test/test.sh",
+    "start": "node cli.js"
+  },
+  "dependencies": {
+    "coffee": "^4.1.0",
+    "colors": "^1.1.2",
+    "commander": "^2.13.0",
+    "lodash": "^4.17.4",
+    "pkginfo": "^0.4.1",
+    "sift": "^5.0.0",
+    "yves": "^1.0.44"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

@@ -1,0 +1,939 @@
+[
+    {
+      "body": [
+        {
+          "p": "Foo bar fooz barz"
+        },
+        {
+          "p": "barrrrrrzzzz foo"
+        }
+      ],
+      "subtitle": "Subtitles are pleasant to have",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "Some muh ree",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "giraffe"
+      ],
+      "published_at": "2016-09-26T18:19:52Z",
+      "intro": [
+        {
+          "p": "Outro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199356,
+      "author": "Piet Pieterse",
+      "alt_titles": {
+      },
+      "sections": [
+        1441,
+        1
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Amsterdam"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Cheese"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "Foo title",
+      "prolog": [
+        {
+          "p": "Sophisticated prologue"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199368,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199365,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199366,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199350,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199352,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199360,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199362,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 199367,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "Voorafgaand aan de film ’Florence Foster Jenkins’ met Meryl Streep draaide een trailer met in de hoofdrol Marijn zelf. In een paar korte sketches liet hij zien wat Sharona met hem in huis haalt wanneer ze ’ja’ zegt. Daarna ging hij voor haar op een knie, ten overstaan van een volle filmzaal. En wat deed Sharona? Ze zei ja."
+        },
+        {
+          "youtube": {
+            "id": "BBPsYzgsGuM"
+          }
+        },
+        {
+          "facebook": {
+            "post": "https://www.facebook.com/VMaxAutosTuning/posts/1191311810994501:0"
+          }
+        },
+        {
+          "twitter": "https://twitter.com/lindapolski/status/850338372853911555"
+        },
+        {
+          "twitter": "https://twitter.com/ronbrandsteder"
+        },
+        {
+          "image": {
+            "url": "//cdn-kiosk-api.telegraaf.nl/131d9a3a-1ba1-11e7-bcd1-a54d123d71e5.jpg",
+            "credit": "Twitter/ANP",
+            "format": "image/jpeg"
+          }
+        },
+        {
+          "p": "<span class=\"bold\"><a href=\"https://www.telesport.nl/artikel/93137/autosport/verstappen-wil-wel-ruilen-met-hamilton\" target=\"_blank\">Verstappen wil wel ruilen met Hamilton</a><span class=\"br\"> </span><a href=\"https://www.telesport.nl/artikel/93127/autosport/max-heeft-een-zesde-zintuig-de-regen\" target=\"_blank\">'Max heeft een zesde zintuig in de regen'</a></span>"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        },
+        {
+          "bullet_list": [
+            "bullet list item one",
+            "bullet list item two"
+          ]
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "bar."
+        },
+        {
+          "p": "foo"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 172106,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "Filmtheater Hilversum is decor van huwelijksaanzoek",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    },
+    {
+      "body": [
+        {
+          "p": "This is a body"
+        },
+        {
+          "subhead": "Hello this is subhead"
+        }
+      ],
+      "subtitle": "This is a subtitle",
+      "attachments": [
+
+      ],
+      "videos": [
+
+      ],
+      "title_summary": "This is a title summary",
+      "hashtags": [
+
+      ],
+      "updated_at": "2016-09-26T18:38:38Z",
+      "keywords": [
+        "uncollidable-keyword-for-inttest",
+        "paard"
+      ],
+      "published_at": "2016-09-26T18:19:51Z",
+      "intro": [
+        {
+          "p": "This is an intro"
+        }
+      ],
+      "linked_products": [
+
+      ],
+      "images": [
+        {
+          "url": "//cdn-kiosk-api.telegraaf.nl/70bd1768-8418-11e6-9e79-2b5e6c6fc93f.jpg",
+          "format": "image/jpeg"
+        }
+      ],
+      "id": 172105,
+      "author": "Joyce Huibers",
+      "alt_titles": {
+      },
+      "sections": [
+        1,
+        1441
+      ],
+      "status": "published",
+      "product": "telegraaf-integration-test",
+      "galleries": [
+
+      ],
+      "premium": false,
+      "tags": {
+        "dateline": [
+          "Hilversum"
+        ]
+      },
+      "publish_until": null,
+      "teaser": [
+        {
+          "p": "Tesa"
+        }
+      ],
+      "related_articles": [
+
+      ],
+      "properties": {
+        "kiosk_type": "Article"
+      },
+      "info": "",
+      "extracts": [
+
+      ],
+      "title": "This is a title",
+      "prolog": [
+        {
+          "p": "Prolog here!"
+        }
+      ]
+    }
+  ]
