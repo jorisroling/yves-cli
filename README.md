@@ -49,7 +49,7 @@ $ yves package.json component.json
 
 #### Pipe from any source:
 ```shell
-$ curl -s "https://api.github.com/users/adjohnson916" | yves
+$ curl -s "https://api.github.com/users/jorisroling" | yves
 ```
 
 ```shell

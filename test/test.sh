@@ -10,8 +10,8 @@ fail() {
 
 $YVES "${ROOT}/package.json" || fail "file"
 $YVES <( echo "{\"a\":9}" ) || fail "stdin echo"
-$YVES <( curl -s "https://api.github.com/users/adjohnson916" ) || fail "stdin curl"
-$YVES --sift "{\"id\": 199356}" < "${ROOT}/test/fixtures/c.json"
+$YVES <( curl -s "https://api.github.com/users/jorisroling" ) || fail "stdin curl"
+$YVES --query "{\"id\": 199356}" < "${ROOT}/test/fixtures/c.json" || fail "stdin fixture"
 
 echo "No failures!"
 
