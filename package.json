@@ -1,6 +1,6 @@
 {
   "name": "yves-cli",
-  "version": "1.0.68",
+  "version": "1.0.70",
   "description": "CLI JSON inspector with jorisroling/yves.js",
   "url": "https://github.com/jorisroling/yves-cli",
   "homepage": "https://github.com/jorisroling/yves-cli",
@@ -52,7 +52,7 @@
     "pkginfo": "^0.4.1",
     "sift": "^7.0.1",
     "xml2js": "^0.4.19",
-    "yves": "^1.0.68"
+    "yves": "^1.0.70"
   },
   "devDependencies": {},
   "engines": {
