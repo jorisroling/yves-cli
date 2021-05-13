@@ -44,13 +44,13 @@
   "dependencies": {
     "coffee": "^5.4.0",
     "colors": "^1.4.0",
-    "commander": "^2.20.3",
+    "commander": "^7.2.0",
     "deasync": "^0.1.21",
-    "jsonic": "^0.3.1",
+    "jsonic": "^1.0.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "pkginfo": "^0.4.1",
-    "sift": "^8.5.1",
+    "sift": "^13.5.3",
     "xml2js": "^0.4.23",
     "yves": "^1.0.78"
   },
