@@ -52,7 +52,7 @@
     "pkginfo": "^0.4.1",
     "sift": "^13.5.4",
     "xml2js": "^0.4.23",
-    "yves": "^1.0.78"
+    "yves": "^1.0.79"
   },
   "devDependencies": {},
   "engines": {
