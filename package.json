@@ -44,7 +44,7 @@
   "dependencies": {
     "coffee": "^5.4.0",
     "colors": "^1.4.0",
-    "commander": "^7.2.0",
+    "commander": "^8.0.0",
     "deasync": "^0.1.21",
     "jsonic": "^1.0.1",
     "lodash": "^4.17.21",
@@ -52,7 +52,7 @@
     "pkginfo": "^0.4.1",
     "sift": "^13.5.4",
     "xml2js": "^0.4.23",
-    "yves": "^1.0.79"
+    "yves": "^1.0.80"
   },
   "devDependencies": {},
   "engines": {
