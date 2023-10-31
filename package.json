@@ -1,6 +1,6 @@
 {
   "name": "yves-cli",
-  "version": "1.0.82",
+  "version": "1.0.83",
   "description": "CLI JSON inspector with jorisroling/yves.js",
   "license": "ISC",
   "url": "https://github.com/jorisroling/yves-cli",
