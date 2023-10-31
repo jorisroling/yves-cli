@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROOT="$(dirname $0)/.."
-YVES="node ${ROOT}/cli.js"
+YVES="node ${ROOT}/cli.mjs"
 
 fail() {
 	 echo "Failed test \"$1\""
