@@ -14,17 +14,15 @@ $ npm install -g yves-cli
 $ yves --help
 Usage: yves [options] <file ...>
 
-  Options:
-
-    -h, --help             output usage information
-    -V, --version          output the version number
-    --no-pretty            no pretty formatting
-    --no-color             no color
-    -m, --max-length <n>   max length
-    -r, --root <path>      set dot notated root field
-    -f, --fields <fields>  comma separated fields
-    -q, --query <expr>     query data with expr (ala mongo)
-    -h, --help             output usage information    
+Options:
+  -V, --version          output the version number
+  --no-pretty            no pretty formatting
+  --no-color             no color
+  -m, --max-length <n>   max length
+  -r, --root <path>      set dot notated root field
+  -f, --fields <fields>  comma separated fields
+  -q, --query <expr>     query data with expr (ala mongo)
+  -h, --help             display help for command
 ```
 
 ## Examples
