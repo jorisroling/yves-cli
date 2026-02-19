@@ -98,6 +98,47 @@ describe('--query option', () => {
     expect(output).not.toContain('199368')
   })
 
+  it('accepts jsonic relaxed syntax (unquoted keys, no braces)', () => {
+    const data = JSON.parse(fs.readFileSync(resolve(fixtures, 'c.json'), 'utf-8'))
+    const main = new Main({ color: false, pretty: true, query: 'id:199356' })
+    const getOutput = collect(main)
+    main.doProcess(data)
+    const output = stripAnsi(getOutput())
+    expect(output).toContain('199356')
+    expect(output).not.toContain('199368')
+  })
+
+  it('accepts jsonic single-quoted string values', () => {
+    const data = JSON.parse(fs.readFileSync(resolve(fixtures, 'c.json'), 'utf-8'))
+    const main = new Main({ color: false, pretty: true, query: "author:'Piet Pieterse'" })
+    const getOutput = collect(main)
+    main.doProcess(data)
+    const output = stripAnsi(getOutput())
+    expect(output).toContain('Piet Pieterse')
+    expect(output).toContain('199356')
+    expect(output).not.toContain('199368')
+  })
+
+  it('accepts jsonic multiple key-value pairs', () => {
+    const data = JSON.parse(fs.readFileSync(resolve(fixtures, 'c.json'), 'utf-8'))
+    const main = new Main({ color: false, pretty: true, query: "status:published,premium:false,id:199356" })
+    const getOutput = collect(main)
+    main.doProcess(data)
+    const output = stripAnsi(getOutput())
+    expect(output).toContain('199356')
+    expect(output).not.toContain('199368')
+  })
+
+  it('accepts jsonic nested object syntax', () => {
+    const data = JSON.parse(fs.readFileSync(resolve(fixtures, 'c.json'), 'utf-8'))
+    const main = new Main({ color: false, pretty: true, query: "properties:{kiosk_type:Article},id:172106" })
+    const getOutput = collect(main)
+    main.doProcess(data)
+    const output = stripAnsi(getOutput())
+    expect(output).toContain('172106')
+    expect(output).not.toContain('199356')
+  })
+
   it('filters with $in operator', () => {
     const data = JSON.parse(fs.readFileSync(resolve(fixtures, 'c.json'), 'utf-8'))
     const main = new Main({ color: false, pretty: true, query: 'id:{$in:[199356,199368]}' })

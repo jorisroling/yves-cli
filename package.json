@@ -37,8 +37,8 @@
     "start": "node cli.mjs"
   },
   "dependencies": {
-    "commander": "^12.1.0",
-    "jsonic": "^1.0.1",
+    "commander": "^14.0.3",
+    "jsonic": "^2.18.0",
     "picocolors": "^1.1.1",
     "sift": "^17.1.3",
     "yves": "^1.0.99"
