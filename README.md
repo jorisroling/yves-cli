@@ -22,6 +22,7 @@ Options:
   -r, --root <path>      set dot notated root field
   -f, --fields <fields>  comma separated fields
   -q, --query <expr>     query data with expr (ala mongo)
+  --no-json              disable JSON output
   -h, --help             display help for command
 ```
 
@@ -53,6 +54,15 @@ $ curl -s "https://api.github.com/users/jorisroling" | yves
 ```shell
 $ echo '{"foo": {"bar": 0}}' | yves
 {
+    "foo": { "bar": 0 }
+}
+```
+
+Output is JSON by default. Use `--no-json` for yves-style formatting:
+
+```shell
+$ echo '{"foo": {"bar": 0}}' | yves --no-json
+{
     foo: { bar: 0 }
 }
 ```
@@ -64,7 +74,7 @@ Use dot notation to drill into nested data:
 ```shell
 $ echo '{"response": {"data": {"name": "Joris"}}}' | yves --root response.data
 {
-    name: 'Joris'
+    "name": "Joris"
 }
 ```
 

@@ -201,12 +201,18 @@ describe('color output', () => {
 describe('CLI integration', () => {
   it('reads a file', () => {
     const output = execSync(`node ${cli} ${resolve(fixtures, 'a.json')}`, { encoding: 'utf-8' })
-    expect(output).toContain('a: 1')
+    expect(output).toContain('"a": 1')
   })
 
   it('reads from stdin', () => {
     const output = execSync(`echo '{"a":9}' | node ${cli}`, { encoding: 'utf-8' })
-    expect(output).toContain('a: 9')
+    expect(output).toContain('"a": 9')
+  })
+
+  it('supports --no-json for yves-style output', () => {
+    const output = execSync(`echo '{"a":1}' | node ${cli} --no-json`, { encoding: 'utf-8' })
+    expect(output).toContain('a: 1')
+    expect(output).not.toContain('"a"')
   })
 
   it('outputs correct version', () => {
