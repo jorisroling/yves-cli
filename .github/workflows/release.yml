@@ -28,7 +28,7 @@ jobs:
           deno-version: v2.x
 
       - name: Compile
-        run: deno compile --allow-read --allow-env --target ${{ matrix.target }} --output yves cli.ts
+        run: deno compile --allow-read --allow-env --allow-net=api.github.com --allow-write --target ${{ matrix.target }} --output yves cli.ts
 
       - name: Zip
         run: zip yves-${{ matrix.name }}.zip yves
@@ -49,7 +49,7 @@ jobs:
           deno-version: v2.x
 
       - name: Compile
-        run: deno compile --allow-read --allow-env --target x86_64-pc-windows-msvc --output yves cli.ts
+        run: deno compile --allow-read --allow-env --allow-net=api.github.com --allow-write --target x86_64-pc-windows-msvc --output yves cli.ts
 
       - name: Zip
         run: Compress-Archive -Path yves.exe -DestinationPath yves-windows-x64.zip
@@ -71,8 +71,8 @@ jobs:
 
       - name: Compile both architectures
         run: |
-          deno compile --allow-read --allow-env --target x86_64-apple-darwin --output yves-x64 cli.ts
-          deno compile --allow-read --allow-env --target aarch64-apple-darwin --output yves-arm64 cli.ts
+          deno compile --allow-read --allow-env --allow-net=api.github.com --allow-write --target x86_64-apple-darwin --output yves-x64 cli.ts
+          deno compile --allow-read --allow-env --allow-net=api.github.com --allow-write --target aarch64-apple-darwin --output yves-arm64 cli.ts
 
       - name: Create universal binary
         run: lipo -create -output yves yves-x64 yves-arm64
