@@ -64,7 +64,7 @@ jobs:
           # Sign the binary
           IDENTITY=$(security find-identity -v -p codesigning $KEYCHAIN_PATH | head -1 | sed 's/.*"\(.*\)"/\1/')
           echo "Signing with: $IDENTITY"
-          codesign --force --options runtime --sign "$IDENTITY" yves
+          codesign --force --options runtime --entitlements entitlements.plist --sign "$IDENTITY" yves
 
           # Notarize
           zip yves-notarize.zip yves
