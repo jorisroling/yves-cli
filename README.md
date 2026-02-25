@@ -5,7 +5,13 @@
 ## Install
 
 ```shell
-$ npm install -g yves-cli
+$ deno install --global --allow-read --allow-env --name yves jsr:@jorisroling/yves-cli/cli.ts
+```
+
+Or from a local clone:
+
+```shell
+$ deno task install
 ```
 
 ## Usage

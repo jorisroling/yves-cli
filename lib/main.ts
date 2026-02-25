@@ -1,10 +1,15 @@
-import fs from 'fs'
+import process from 'node:process'
 import yves from 'yves'
-import OutputStream from './output_stream.mjs'
-import sift from 'sift'
-import jsonic from 'jsonic'
+import OutputStream from './output_stream.ts'
+import _sift from 'sift'
+import _jsonic from 'jsonic'
 
-function defaults(target, ...sources) {
+// These npm packages have type exports incompatible with Deno's module resolution
+const sift = _sift as unknown as (query: Record<string, unknown>) => (item: unknown) => boolean
+const jsonic = _jsonic as unknown as (text: string) => Record<string, unknown>
+
+// deno-lint-ignore no-explicit-any
+function defaults(target: any, ...sources: any[]): any {
   for (const source of sources) {
     if (source) {
       for (const key of Object.keys(source)) {
@@ -17,26 +22,42 @@ function defaults(target, ...sources) {
   return target
 }
 
-function get(obj, path) {
-  return path.split('.').reduce((o, k) => o?.[k], obj)
+function get(obj: Record<string, unknown>, path: string): unknown {
+  return path.split('.').reduce((o: unknown, k: string) => (o as Record<string, unknown>)?.[k], obj)
 }
 
-function pick(obj, keys) {
+function pick(obj: Record<string, unknown>, keys: string[]): Record<string, unknown> {
   return Object.fromEntries(keys.filter(k => k in obj).map(k => [k, obj[k]]))
+}
+
+export interface MainOptions {
+  color?: boolean
+  pretty?: boolean
+  json?: boolean
+  root?: string
+  fields?: string
+  query?: string
+  maxLength?: number
+  hideFunctions?: boolean
+  styles?: Record<string, string>
 }
 
 /*
  * Gets input, parses as JSON, and writes output to its stream.
  */
 export class Main {
-  constructor(options = {}) {
-    this.options = defaults({}, options, { color: true }, yves.defaults)
-    defaults(this.options.styles, yves.defaults.styles)
+  options: MainOptions
+  outputStream: OutputStream
+  outputFn: (obj: unknown) => void
+
+  constructor(options: MainOptions = {}) {
+    this.options = defaults({} as MainOptions, options, { color: true }, yves.defaults)
+    defaults(this.options.styles ?? {}, yves.defaults.styles)
     this.outputStream = new OutputStream({ color: this.options.color })
     this.outputFn = this.getOutputFn()
   }
 
-  getOutputFn() {
+  getOutputFn(): (obj: unknown) => void {
     return yves.inspector({
       styles: this.options.styles,
       maxLength: this.options.maxLength,
@@ -47,15 +68,15 @@ export class Main {
     })
   }
 
-  parse(json) {
+  parse(json: string): Record<string, unknown> | undefined {
     if (json.indexOf('{') >= 0) {
-      return JSON.parse(json.substr(0, 5) === ")]}'," ? json.substr(5) : json)
+      return JSON.parse(json.substring(0, 5) === ")]}'," ? json.substring(5) : json)
     }
   }
 
-  doProcess(object) {
+  doProcess(object: unknown): void {
     if (this.options.root) {
-      object = get(object, this.options.root)
+      object = get(object as Record<string, unknown>, this.options.root)
     }
 
     if (this.options.query) {
@@ -71,47 +92,47 @@ export class Main {
     if (this.options.fields) {
       if (Array.isArray(object)) {
         const fields = this.options.fields.split(',')
-        object = object.map(item => pick(item, fields))
+        object = object.map((item: Record<string, unknown>) => pick(item, fields))
       } else {
         console.error(`Data root is not of type array (but of type ${typeof object}), so fields is not possible.` + (this.options.root ? '' : ' Maybe --root can help?'))
         return
       }
     }
 
-    return this.outputFn(object)
+    this.outputFn(object)
   }
 
   /*
    * Accept input from a list of filenames.
    * Read, parse, and output each in sequence.
    */
-  forFiles(filenames) {
+  forFiles(filenames: string[]): void {
     filenames.forEach((filename) => {
-      const buffer = fs.readFileSync(filename)
-      const string = buffer.toString()
+      const string = Deno.readTextFileSync(filename)
       const object = this.parse(string)
-      return this.doProcess(object)
+      this.doProcess(object)
     })
   }
 
   /*
    * Accept input from a stream, then parse and output.
    */
-  fromStream(stream) {
-    let capture = ''
-    stream.on('data', (chunk) => {
-      capture += chunk
+  fromStream(stream: NodeJS.ReadableStream): void {
+    stream.on('data', (chunk: string) => {
+      this._capture += chunk
     })
     stream.on('end', () => {
-      const object = this.parse(capture)
-      return this.doProcess(object)
+      const object = this.parse(this._capture)
+      this.doProcess(object)
     })
   }
+
+  private _capture = ''
 
   /*
    * Called for the command-line.
    */
-  command(args) {
+  command(args: string[]): void {
     this.outputStream.pipe(process.stdout)
     if (args.length > 0) {
       this.forFiles(args)
