@@ -2,13 +2,12 @@ import { Command } from '@cliffy/command'
 import { red } from '@std/fmt/colors'
 import { Main, type MainOptions } from './main.ts'
 import CustomError from './custom_error.ts'
-
-const denoJson = JSON.parse(Deno.readTextFileSync(new URL('../deno.json', import.meta.url)))
+import { VERSION } from './version.ts'
 
 export default async function () {
   await new Command()
     .name('yves')
-    .version(denoJson.version)
+    .version(VERSION)
     .arguments('[files...:string]')
     .option('--no-pretty', 'no pretty formatting')
     .option('--no-color', 'no color')
