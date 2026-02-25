@@ -3,6 +3,7 @@ import { red } from '@std/fmt/colors'
 import { Main, type MainOptions } from './main.ts'
 import CustomError from './custom_error.ts'
 import { VERSION } from './version.ts'
+import { checkForUpdate } from './update_check.ts'
 
 export default async function () {
   await new Command()
@@ -18,6 +19,7 @@ export default async function () {
     .option('--no-json', 'disable JSON output')
     .option('--js', 'disable JSON output (alias for --no-json)')
     .action((opts, ...files: string[]) => {
+      checkForUpdate()
       const options: MainOptions = {
         color: opts.color,
         pretty: opts.pretty,

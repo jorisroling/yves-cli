@@ -14,10 +14,10 @@
     ]
   },
   "tasks": {
-    "start": "deno run --allow-read --allow-env cli.ts",
-    "test": "deno test --allow-read --allow-env --allow-run",
-    "install": "deno install --global --allow-read --allow-env --name yves --config deno.json cli.ts",
-    "compile": "deno compile --allow-read --allow-env --output yves cli.ts"
+    "start": "deno run --allow-read --allow-env --allow-net=api.github.com --allow-write cli.ts",
+    "test": "deno test --allow-read --allow-env --allow-run --allow-net=api.github.com --allow-write",
+    "install": "deno install --global --allow-read --allow-env --allow-net=api.github.com --allow-write --name yves --config deno.json cli.ts",
+    "compile": "deno compile --allow-read --allow-env --allow-net=api.github.com --allow-write --output yves cli.ts"
   },
   "imports": {
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0",
