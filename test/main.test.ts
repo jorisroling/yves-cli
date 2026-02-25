@@ -1,6 +1,7 @@
 import { assertEquals, assertStringIncludes, assert, assertMatch } from '@std/assert'
 import { Main } from '../lib/main.ts'
 import { PassThrough } from 'node:stream'
+import { compareVersions } from '../lib/update_check.ts'
 
 const fixtures = new URL('./fixtures/', import.meta.url).pathname
 const cli = new URL('../cli.ts', import.meta.url).pathname
@@ -249,4 +250,28 @@ Deno.test('CLI - supports --query flag', () => {
   const output = run('--query', '{"id": 199356}', fixtures + 'c.json')
   assertStringIncludes(output, '199356')
   assert(!output.includes('199368'))
+})
+
+// --- version comparison ---
+
+Deno.test('compareVersions - detects newer major version', () => {
+  assert(compareVersions('1.1.5', '2.0.0'))
+})
+
+Deno.test('compareVersions - detects newer minor version', () => {
+  assert(compareVersions('1.1.5', '1.2.0'))
+})
+
+Deno.test('compareVersions - detects newer patch version', () => {
+  assert(compareVersions('1.1.5', '1.1.6'))
+})
+
+Deno.test('compareVersions - returns false for same version', () => {
+  assert(!compareVersions('1.1.5', '1.1.5'))
+})
+
+Deno.test('compareVersions - returns false for older version', () => {
+  assert(!compareVersions('1.1.5', '1.1.4'))
+  assert(!compareVersions('1.1.5', '1.0.9'))
+  assert(!compareVersions('2.0.0', '1.9.9'))
 })

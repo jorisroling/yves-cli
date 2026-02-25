@@ -6,6 +6,9 @@ import { VERSION } from './version.ts'
 import { checkForUpdate } from './update_check.ts'
 
 export default async function () {
+  const isInfoFlag = Deno.args.includes('--version') || Deno.args.includes('-V') || Deno.args.includes('--help') || Deno.args.includes('-h')
+  if (isInfoFlag) await checkForUpdate(true)
+
   await new Command()
     .name('yves')
     .version(VERSION)

@@ -11,7 +11,7 @@ interface CacheData {
   latestVersion: string | null
 }
 
-function compareVersions(current: string, latest: string): boolean {
+export function compareVersions(current: string, latest: string): boolean {
   const c = current.split('.').map(Number)
   const l = latest.split('.').map(Number)
   for (let i = 0; i < 3; i++) {
@@ -53,10 +53,10 @@ function notify(latestVersion: string): void {
   console.error(yellow(`Update with: deno task install\n`))
 }
 
-export async function checkForUpdate(): Promise<void> {
+export async function checkForUpdate(force = false): Promise<void> {
   try {
     const cache = readCache()
-    if (cache && Date.now() - cache.lastCheck < CHECK_INTERVAL) {
+    if (!force && cache && Date.now() - cache.lastCheck < CHECK_INTERVAL) {
       if (cache.latestVersion && compareVersions(VERSION, cache.latestVersion)) {
         notify(cache.latestVersion)
       }
