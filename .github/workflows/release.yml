@@ -62,7 +62,9 @@ jobs:
           security list-keychain -d user -s $KEYCHAIN_PATH
 
           # Sign the binary
-          codesign --force --options runtime --sign "Developer ID Application: $(security find-identity -v -p codesigning $KEYCHAIN_PATH | head -1 | sed 's/.*"\(.*\)"/\1/')" yves
+          IDENTITY=$(security find-identity -v -p codesigning $KEYCHAIN_PATH | head -1 | sed 's/.*"\(.*\)"/\1/')
+          echo "Signing with: $IDENTITY"
+          codesign --force --options runtime --sign "$IDENTITY" yves
 
           # Notarize
           zip yves-notarize.zip yves
