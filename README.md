@@ -1,6 +1,7 @@
 # yves-cli
 
-> CLI JSON inspector with [yves][yves] from [Joris Röling][jorisroling]. Pretty colors!
+> CLI JSON inspector with [yves][yves] from [Joris Röling][jorisroling]. Pretty
+> colors!
 
 ## Install
 
@@ -37,6 +38,7 @@ Options:
 ### Sources
 
 #### From file:
+
 ```shell
 $ ls
 package.json component.json
@@ -45,6 +47,7 @@ $ yves package.json
 ```
 
 #### Or many files:
+
 ```shell
 $ ls
 package.json component.json
@@ -53,6 +56,7 @@ $ yves package.json component.json
 ```
 
 #### Pipe from any source:
+
 ```shell
 $ curl -s "https://api.github.com/users/jorisroling" | yves
 ```
@@ -86,7 +90,9 @@ $ echo '{"response": {"data": {"name": "Joris"}}}' | yves --root response.data
 
 ### Filter with --query
 
-Query arrays using MongoDB-style expressions. Supports [jsonic](https://github.com/rjrodger/jsonic) relaxed syntax — no braces or quotes needed:
+Query arrays using MongoDB-style expressions. Supports
+[jsonic](https://github.com/rjrodger/jsonic) relaxed syntax — no braces or
+quotes needed:
 
 ```shell
 # strict JSON
