@@ -18,9 +18,9 @@
     "test": "deno test --allow-read --allow-env --allow-run --allow-net=api.github.com --allow-write",
     "install": "deno install --global --allow-read --allow-env --allow-net=api.github.com --allow-write --name yves --config deno.json cli.ts",
     "compile": "deno compile --allow-read --allow-env --allow-net=api.github.com --allow-write --output yves cli.ts",
-    "version:patch": "deno run --allow-read --allow-write scripts/bump-version.ts patch",
-    "version:minor": "deno run --allow-read --allow-write scripts/bump-version.ts minor",
-    "version:major": "deno run --allow-read --allow-write scripts/bump-version.ts major"
+    "version:patch": "deno run --allow-read --allow-write --allow-run=git scripts/bump-version.ts patch",
+    "version:minor": "deno run --allow-read --allow-write --allow-run=git scripts/bump-version.ts minor",
+    "version:major": "deno run --allow-read --allow-write --allow-run=git scripts/bump-version.ts major"
   },
   "imports": {
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0",
